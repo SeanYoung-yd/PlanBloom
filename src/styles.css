@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #14b8a6;
+  --color-primary-soft: #ccfbf1;
+  --color-coral: #fb7185;
+  --color-sky: #38bdf8;
+  --color-yellow: #facc15;
+  --color-lilac: #a78bfa;
+  --color-mint: #34d399;
+  --color-bg: #fffdf7;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f8fafc;
+  --color-text: #1f2937;
+  --color-text-muted: #64748b;
+  --color-border: #e5e7eb;
+  --radius-card: 8px;
+  --radius-control: 8px;
+  --radius-pill: 9999px;
+  --shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --shadow-sticker: 0 3px 8px rgba(15, 23, 42, 0.16);
+}
+
+[data-theme="sunny"] {
+  --color-primary: #f59e0b;
+  --color-primary-soft: #fef3c7;
+  --color-bg: #fffaf0;
+}
+
+[data-theme="mint"] {
+  --color-primary: #10b981;
+  --color-primary-soft: #d1fae5;
+  --color-bg: #f7fffb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.pb-input {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  background: #ffffff;
+  padding: 0.7rem 0.8rem;
+  color: var(--color-text);
+  outline: none;
+}
+
+.pb-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-soft);
+}
+
+.pb-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.pb-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}

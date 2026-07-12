@@ -1,0 +1,14 @@
+node_modules/
+dist/
+
+*.tsbuildinfo
+*.log
+vite-dev*.log
+
+vite.config.js
+vite.config.d.ts
+
+.DS_Store
+Thumbs.db
+
+PlanBloom_项目汇报-*.pdf
